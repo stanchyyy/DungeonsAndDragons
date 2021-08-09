@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body class="bg-light py-0 my-0">
-    <header>
-        <div class="container bg-dark fixed-top">
+    <header class="bg-dark mb-1 pb-1 sticky-top">
+        <div class="container  h-auto">
             <nav class="navbar navbar-expand-xl navbar-dark ">
                 <a class="navbar-brand">
                     <img src="~/Images/Dungeons_&_Dragons_5th_Edition_logo.svg" width="200" height="30" alt="D&D Logo" />
@@ -45,20 +45,24 @@
         </div>
     </header>
     <div class="container">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
+        <main role="main" class="pb-0">
+            @RenderBody()
+        </main>
     </div>
-    <footer class="footer mt-auto">
+
+    <footer class="card-footer  mt-1 pt-1 bg-dark">
         <div class="container">
+
             <ul class="nav justify-content-center">
                 <li class="nav-item"><a href="#" class="nav-link pt-1 text-muted">About</a></li>
                 <li class="nav-item"><a href="#" class="nav-link pt-1 text-muted">Contacts</a></li>
                 <li class="nav-item"><a href="#" class="nav-link pt-1 text-muted">Meet the team</a></li>
             </ul>
             <p class="text-center text-muted">&copy; 2021 Stanislav Atanasov, Inc</p>
+
         </div>
     </footer>
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
