@@ -48,23 +48,24 @@
                                     <h3>Create new hero</h3>
                                     <div class="form-group">
                                         <label asp-for="Player.Email">Email address</label>
-                                        <input asp-for="Player.Email" type="email" class="form-control" id="SignUpFormEmail" placeholder="email@example.com">
+                                        <input asp-for="Player.Email" type="email" class="form-control" id="Player.Email" placeholder="email@example.com">
                                         <span asp-validation-for="Player.Email" class="text-warning"></span>
                                     </div>
                                     <div class="form-group">
                                         <label asp-for="Player.PlayerName">Player name</label>
-                                        <input asp-for="Player.PlayerName" type="text" class="form-control" id="SignUpFormPlayerName" placeholder="Player name">
+                                        <input asp-for="Player.PlayerName" type="text" class="form-control" id="Player.PlayerName" placeholder="Player name">
                                         <span asp-validation-for="Player.PlayerName" class="text-warning"></span>
                                     </div>
-                                    <button type="submit" class="btn bg-danger text-white">Sign up</button>
+                                    <button type="submit" asp-page-handler="ButtonSignUp" class="btn bg-danger text-white">Sign up</button>
                                 </form>
-                                <form class="px-4 py-3">
+                                <form method="post"  class="px-4 py-3">
                                     <h3>Already a player</h3>
                                     <div class="form-group">
-                                        <label for="SignUpFormEmail">Email address</label>
-                                        <input type="email" class="form-control" id="SignUpFormEmail" placeholder="email@example.com">
+                                        <label asp-for="PlayerSearch">Email address</label>
+                                        <input asp-for="PlayerSearch" id="PlayerSearch" type="text" class="form-control" placeholder="email@example.com">
+                                        <span asp-validation-for="PlayerSearch" class="text-warning"></span>
                                     </div>
-                                    <button type="submit" class="btn bg-danger text-white">Sign in</button>
+                                    <button asp-page-handler="ButtonSignIn" type="submit"  class="btn bg-danger text-white">Sign in</button>
                                 </form>
                             </div>
                         </div>

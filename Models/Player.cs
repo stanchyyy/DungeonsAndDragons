@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace DungeonsAndDragons
 {
+    [Index(nameof(Email), IsUnique = true)]
     public class Player
     {
         public int Id { get; set; }
