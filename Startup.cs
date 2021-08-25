@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DungeonsAndDragons.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace DungeonsAndDragons
 {
@@ -25,6 +27,7 @@ namespace DungeonsAndDragons
         {
             services.AddRazorPages();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            services.AddDbContext<DungeonsAndDragonsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DungeonsAndDragonsContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
